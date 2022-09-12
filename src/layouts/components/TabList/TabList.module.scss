@@ -1,0 +1,79 @@
+.wrapper {
+    --scroll-wrapper-width: 1118px;
+    position: relative;
+    max-width: var(--scroll-wrapper-width);
+    width: 100%;
+
+    &.tabListDisplayNone {
+        display: none;
+    }
+}
+
+.scroll-content {
+    max-width: var(--scroll-wrapper-width);
+    width: 100%;
+    position: fixed;
+}
+
+.tab-list {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    height: var(--tablist-height);
+    // position: absolute;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tab-item {
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.back-icon,
+.next-icon {
+    position: fixed;
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.98);
+    z-index: 10;
+}
+
+.back-icon {
+    left: 0;
+    top: 0;
+    display: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        right: -100%;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        cursor: default;
+    }
+}
+
+.next-icon {
+    right: 0;
+    top: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        right: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        cursor: default;
+    }
+}

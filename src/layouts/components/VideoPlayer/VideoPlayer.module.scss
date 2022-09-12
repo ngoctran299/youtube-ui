@@ -1,0 +1,233 @@
+.wrapper {
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: var(--watch-video-container-width);
+    max-width: 100%;
+    min-height: 2000px;
+    padding-top: calc(var(--header-height) - var(--tablist-height));
+    margin: 0 auto;
+}
+
+.video-play-column {
+    width: calc(var(--watch-video-container-width) - var(--watch-video-list-width));
+    padding: 24px 24px 0 8px;
+}
+
+.video-details {
+    margin: 12px 0 24px;
+}
+
+.first-section {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.video-title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+}
+
+.video-time-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video-time {
+    display: flex;
+    align-items: center;
+    margin: 8px 0 8px;
+}
+
+.video-views,
+.video-date {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.video-views {
+    &::after {
+        content: '•';
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2rem;
+        margin: 0 4px;
+    }
+}
+
+.actions {
+    display: flex;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.action-icon {
+    margin: 6px;
+    height: 24px;
+}
+
+.action-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.second-section {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.video-channel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.channel {
+    display: flex;
+    align-items: center;
+}
+
+.channel-avatar {
+    margin-right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.channel-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tick {
+    margin: 6px 0 0 4px;
+    color: var(--text-color-secondary);
+}
+
+.video-description {
+    display: block;
+    margin: 18px 50px 0 50px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: rgb(96, 96, 96);
+}
+
+.comment-group {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 32px;
+}
+
+.comment-group-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.comment-group-text {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.comment-group-icon {
+    display: block;
+    margin-right: 8px;
+    margin-top: 6px;
+}
+
+.user-comment-input {
+    display: flex;
+    margin-right: 16px;
+}
+
+.user-avatar {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.input-group {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-bottom: 1px solid #909090;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+.border-when-focus {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border: 1px solid #000;
+    display: none;
+
+    // animation: transform linear 1s;
+    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+}
+
+.input-group {
+    input:focus-within ~ .border-when-focus,
+    input:focus-within ~ .input-actions {
+        display: flex;
+    }
+}
+
+.input-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.emoji {
+    display: block;
+    padding: 8px;
+    height: 36px;
+}
+
+.input-actions-btns {
+    display: flex;
+}
+
+.video-list-column {
+    width: var(--watch-video-list-width);
+    min-width: 300px;
+    padding: 24px 24px 0 0;
+}

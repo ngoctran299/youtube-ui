@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    height: calc(var(--header-height) - var(--tablist-height));
+}
+
+.sidebar-small {
+    position: fixed;
+    top: calc(var(--header-height) - var(--tablist-height));
+    left: 0;
+    width: var(--sidebar-small-width);
+}
+
+.content-wrapper {
+    margin-left: var(--sidebar-large-width);
+    background-color: #f9f9f9;
+
+    display: flex;
+    flex: 1;
+
+    &.large {
+        margin-left: var(--sidebar-small-width);
+    }
+}

@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.menu-btn {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    padding: 18px 14px 18px 16px;
+    width: 120px;
+    height: calc(var(--header-height) - var(--tablist-height));
+}
+
+.country-code {
+    margin: -18px 0 0 -10px;
+    color: #606060;
+    font-size: 1rem;
+}
